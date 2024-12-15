@@ -14,9 +14,9 @@ def run_simulation():
     ]   
 
     developers = [
-    Developer("Alice", DeveloperRole.BACKEND, 0.8, ["Python", "Django", "REST"]),
-    Developer("Bob", DeveloperRole.FRONTEND, 0.7, ["HTML", "CSS", "JavaScript"]),
-    Developer("Charlie", DeveloperRole.DEVOPS, 0.9, ["Docker", "Kubernetes"]),
+        Developer("Alice", DeveloperRole.BACKEND, 0.8, ["Python", "Django", "REST"]),
+        Developer("Bob", DeveloperRole.FRONTEND, 0.7, ["HTML", "CSS", "JavaScript"]),
+        Developer("Charlie", DeveloperRole.DEVOPS, 0.9, ["Docker", "Kubernetes"]),
     ]
 
     team = Team(developers)
@@ -41,7 +41,7 @@ def run_simulation():
     # Sample data for game development
     game_tasks = [
         Task("Design Game Levels", TaskDifficulty.MEDIUM, ["Level Design", "Unity"], 15),
-        Task("Implement Game Physics", TaskDifficulty.HARD, ["C++", "Physics"], 20),
+        Task("Implement Game Physics", TaskDifficulty.HARD, ["C++", "Physics"], 25),
         Task("Create 3D Models", TaskDifficulty.MEDIUM, ["3D Modeling", "Blender"], 12),
     ]
 
@@ -58,7 +58,7 @@ def run_simulation():
         game_team.assign_tasks(game_tasks)
 
         # Random event
-        if random.random() < 0.3:  # 30% chance of an event
+        if random.random() < 0.9:  # 30% chance of an event
             event = random.choice([
                 Event(EventType.BUG_FIX, "Game bug fix required, delaying progress."),
                 Event(EventType.ABSENCE, "Game developer absent, progress slowed."),
